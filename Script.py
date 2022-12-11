@@ -4,11 +4,11 @@ class script(object):
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
     ABOUT_TXT = """<b>🥱 My Name : {}
-🕵‍♂ Developer : <a href='https://t.me/M4MHD'>★ 𝙈𝙃𝘿 𝙏𝙃𝘼𝙉𝙕𝙀𝙀𝙍 ★</a>
+🕵‍♂ Developer : <a href='https://t.me/alluvichu'>★ Dark Hunter ᡧ ★</a>
 📚 Library : 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
 🖥 Language : 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 🎪 Data Base : 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-🔋 Bot Group : @wolfpackmedia3 </b>"""
+🔋 Movie Updates : @Moviesclubupdates </b>"""
     SOURCE_TXT = """<b>NOTE:</b>
 <b>𝖳𝗁𝗂𝗌 𝖡𝗈𝗍 𝖶𝖺𝗌 𝖬𝖺𝗄𝖾𝖽 𝖳𝖺𝗄𝗂𝗇𝗀 𝖲𝗈𝗆𝖺𝗇𝗒 𝖱𝖾𝗉𝗈𝗌 𝖮𝖿 𝖮𝗍𝗁𝖾𝗋 𝖪𝗂𝗇𝖽 𝖡𝗈𝗍𝗌
 𝖲𝖮𝖴𝖱𝖢𝖤 𝖢𝖮𝖣𝖤 ~ 𝖭𝖮𝖳 𝖠𝖵𝖠𝖨𝖫𝖠𝖡𝖫𝖤 𝖱𝖨𝖦𝖧𝖳 𝖭𝖮𝖶</b>"""
@@ -36,7 +36,7 @@ class script(object):
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/M4MHD)</code>
+<code>[Button Text](buttonurl:https://t.me/moviesclubupdates)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
@@ -63,7 +63,7 @@ class script(object):
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
-these are the extra features of Eva Maria
+these are the extra features of Spidey
 
 <b>Commands and Usage:</b>
 • /id - <code>get id of a specified user.</code>
