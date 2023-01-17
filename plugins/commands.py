@@ -246,7 +246,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("📢 ᴜᴘᴅᴀᴛᴇs 📢", url="https://t.me/moviesclubupdates"),
-                                               InlineKeyboardButton("🎞 REQUEST GROUP 🎞", url="https://t.me/share/url?url=https://t.me/WOLFPACKMEDIA3") ],
+                                               InlineKeyboardButton("🎞 REQUEST GROUP 🎞", url="https://t.me/+TGPAvILX9_thNGU9") ],
                                              [ InlineKeyboardButton("🔖ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴜʙᴛɪᴛʟᴇ🔖", url="https://telegra.ph/httpstelegraphfilee908cfc0d08e47ca337ecjpg-01-06") ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
