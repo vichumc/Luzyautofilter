@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/WPM_OTT')
+                InlineKeyboardButton('🤖 Updates', url='https://t.me/moviesclubupdates')
             ],
             [
                 InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -42,13 +42,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ ADD ME TO YOUR GROUP ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 ᴜᴘᴅᴀᴛᴇ 💠', url='https://t.me/M4MHD'),
-            InlineKeyboardButton('💠 ᴍᴏᴠɪᴇs 💠', url='https://t.me/WOLFPACKMEDIA3')
+            InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs 📢', url='https://t.me/moviesclubupdates'),
+            InlineKeyboardButton('🎞 ᴍᴏᴠɪᴇs 🎞', url='https://t.me/+7Yv7oUfrHWg1MDEx')
             ],[      
-            InlineKeyboardButton('♻️ ʜᴇʟᴘ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about')
+            InlineKeyboardButton('🛠 ʜᴇʟᴘ 🛠', callback_data='help'),
+            InlineKeyboardButton('🤖 ᴀʙᴏᴜᴛ 🤖', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -67,7 +67,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url=invite_link.invite_link
+                    "📢 Join updates channel 📢", url=invite_link.invite_link
                 )
             ]
         ]
@@ -76,25 +76,25 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("🔄 Try Again 🔄", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("🔄 Try Again 🔄", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text=f"""**♦️ 𝗥𝗘𝗔𝗗 𝗧𝗛𝗜𝗦 𝗜𝗡𝗦𝗧𝗥𝗨𝗖𝗧𝗜𝗢𝗡 ♦️\n\nനിങ്ങൾ ചോദിക്കുന്ന സീരിസുകൾ ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ ജോയിൻ ചെയ്തിരിക്കണം. ജോയിൻ ചെയ്യാൻ "  𝗝𝗼𝗶𝗻 UPDATES  𝗖𝗵𝗮𝗻𝗻𝗲𝗹  "എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്യാവുന്നതാണ്.\n\nജോയിൻ ചെയ്ത ശേഷം "  𝗧𝗿𝘆 𝗔𝗴" എന്ന ബട്ടണിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ അയച്ചു തരുന്നതാണ്..\n\nJOIN UPDATES CHANNEL AND THEN CLICK TRY AGAIN BUTTON TO GET SERIES FILE**""",
+            text=f"""**📢 Read This Instruction 📢\n\nനിങ്ങൾ ചോദിക്കുന്ന സീരിസുകൾ ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ ജോയിൻ ചെയ്തിരിക്കണം. ജോയിൻ ചെയ്യാൻ "📢 Join updates channel 📢" എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്യാവുന്നതാണ്.\n\nജോയിൻ ചെയ്ത ശേഷം "🔄 Try Again 🔄" എന്ന ബട്ടണിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ അയച്ചു തരുന്നതാണ്..\n\nJOIN UPDATES CHANNEL AND THEN CLICK TRY AGAIN BUTTON TO GET THE FILE**""",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ ADD ME TO YOUR GROUP ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 ᴜᴘᴅᴀᴛᴇ 💠', url='https://t.me/WPM_OTT'),
-            InlineKeyboardButton('💠 ᴍᴏᴠɪᴇs 💠', url='https://t.me/WOLFPACKMEDIA3')
+            InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs 📢', url='https://t.me/moviesclubupdates'),
+            InlineKeyboardButton('🎞 ᴍᴏᴠɪᴇs 🎞', url='https://t.me/+7Yv7oUfrHWg1MDEx')
             ],[      
-            InlineKeyboardButton('♻️ ʜᴇʟᴘ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about')
+            InlineKeyboardButton('🛠 ʜᴇʟᴘ 🛠', callback_data='help'),
+            InlineKeyboardButton('🤖 ᴀʙᴏᴜᴛ 🤖', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -141,7 +141,7 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("㊗️  𝙐𝙋𝙇𝙊𝘼𝘿𝙀𝙍  ㊗️", url="https://t.me/M4MHD") ] ] ),
+                    reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("📢 UPDATES CHANNEL 📢", url="https://t.me/moviesclubupdates") ] ] ),
                     protect_content=msg.get('protect', False),
                     )
             except FloodWait as e:
@@ -245,8 +245,8 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("㊗️  𝙐𝙋𝙇𝙊𝘼𝘿𝙀𝙍  ㊗️", url="https://t.me/M4MHD"),
-                                               InlineKeyboardButton("💥ꜱʜᴀʀᴇ💥", url="https://t.me/share/url?url=https://t.me/WOLFPACKMEDIA3") ],
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("📢 ᴜᴘᴅᴀᴛᴇs 📢", url="https://t.me/moviesclubupdates"),
+                                               InlineKeyboardButton("🎞 REQUEST GROUP 🎞", url="https://t.me/share/url?url=https://t.me/WOLFPACKMEDIA3") ],
                                              [ InlineKeyboardButton("🔖ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴜʙᴛɪᴛʟᴇ🔖", url="https://telegra.ph/httpstelegraphfilee908cfc0d08e47ca337ecjpg-01-06") ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
