@@ -845,7 +845,9 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                            mh = await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                            await asyncio.sleep(5)
+                            await mh.delete()
                         else:
                             button = eval(btn)
                             await client.send_message(
@@ -864,15 +866,13 @@ async def manual_filters(client, message, text=False):
                         )
                     else:
                         button = eval(btn)
-                        lm = await message.reply_cached_media(
+                        await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
-                         await asyncio.sleep(5)
-                         await lm.delete()
-                except Exception as e:
+                        except Exception as e:
                     logger.exception(e)
                 break
     else:
