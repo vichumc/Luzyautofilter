@@ -765,7 +765,7 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
          s = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-         await asyncio.sleep(200)
+         await asyncio.sleep(300)
          await s.delete()
     if spoll:
         await msg.message.delete()
@@ -781,7 +781,7 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply("I couldn't find any movie in that name.")
-        await asyncio.sleep(8)
+        await asyncio.sleep(10)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -845,19 +845,15 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            mh = await client.send_message(group_id, reply_text, disable_web_page_preview=True)
-                            await asyncio.sleep(5)
-                            await mh.delete()
-                        else:
+                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)                           
+                     else:
                             button = eval(btn)
-                            ml = await client.send_message(
+                            await client.send_message(
                                 group_id,
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
-                                reply_to_message_id=reply_id
-                             await asyncio.sleep(5)
-                             await ml.delete()
+                                reply_to_message_id=reply_id                    
                             )
                     elif btn == "[]":
                         await client.send_cached_media(
@@ -868,7 +864,7 @@ async def manual_filters(client, message, text=False):
                         )
                     else:
                         button = eval(btn)
-                        await message.reply_cached_media(
+                    k = await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
@@ -878,4 +874,6 @@ async def manual_filters(client, message, text=False):
                     logger.exception(e)
                 break
     else:
+                        await asyncio.sleep(5)
+                        await k.delete()
         return False
