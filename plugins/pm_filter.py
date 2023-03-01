@@ -764,9 +764,9 @@ async def auto_filter(client, msg, spoll=False):
             logger.exception(e)
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-         hl = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+         s = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
          await asyncio.sleep(200)
-         await hl.delete()
+         await s.delete()
     if spoll:
         await msg.message.delete()
 
@@ -810,7 +810,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("Requested Movie/Series Spelling incorrect or OTT/DVD not Released")
-        await asyncio.sleep(15)
+        await asyncio.sleep(20)
         await k.delete()
         return
     SPELL_CHECK[msg.id] = movielist
