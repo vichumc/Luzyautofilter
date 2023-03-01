@@ -760,7 +760,7 @@ async def auto_filter(client, msg, spoll=False):
             await z.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
-            poster = pic.replace("https://telegra.ph/file/af122b0bf8cf04be1ecb5.jpg")
+            poster = pic.replace('.jpg', "._V1_UX360.jpg")
             m = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(250)
             await m.delete()
