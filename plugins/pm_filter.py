@@ -754,14 +754,14 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>Hey 👋🏻 {message.from_user.mention} 😍</b>\n\n<b><i>🔖 Title : {search}</b>\n<b>📫 Your Files is Ready Now</b></i>\n\n<b><i>🅒 2023 | 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 : @MC_TgLinks**</b></i>"
     if imdb and imdb.get('poster'):
         try:
-            z = await message.reply_photo(photo="https://telegra.ph/file/af122b0bf8cf04be1ecb5.jpg", caption=cap[:1024],
+            z = await message.reply_photo(photo="https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg", caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(300)
             await z.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
-            poster = pic.replace('https://telegra.ph/file/af122b0bf8cf04be1ecb5.jpg', "https://telegra.ph/file/af122b0bf8cf04be1ecb5.jpg")
-            m = await message.reply_photo(photo="https://telegra.ph/file/af122b0bf8cf04be1ecb5.jpg", caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            poster = pic.replace('https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg', "https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg")
+            m = await message.reply_photo(photo="https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg", caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(300)
             await m.delete()
         except Exception as e:
