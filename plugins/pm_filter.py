@@ -754,29 +754,25 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>Hey 👋🏻 {message.from_user.mention} 😍</b>\n\n<b><i>🔖 Title : {search}</b>\n<b>📫 Your Files is Ready Now</b></i>\n\n<b><i>🅒 2023 | 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 : @MC_TgLinks**</b></i>"
     if imdb and imdb.get('poster'):
         try:
-            hehe =  await message.reply_photo(photo="https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg", caption=cap[:1024],
-                                      reply_markup=InlineKeyboardMarkup(btn))
-            if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
+            hehe =  await message.reply_photo(photo=https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg, caption=cap[:1024],
+                                      reply_markup=InlineKeyboardMarkup(btn)) 
+                await asyncio.sleep(300)
                 await hehe.delete()
 
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo(photo=https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
-            if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
+                await asyncio.sleep(300)
                 await hmm.delete()
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
+            fek = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) 
+                await asyncio.sleep(300)
                 await fek.delete()
     else:
         fuk = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        if SELF_DELETE:
-            await asyncio.sleep(SELF_DELETE_SECONDS)
+            await asyncio.sleep(300)
             await fuk.delete()
 
 async def advantage_spell_chok(msg):
