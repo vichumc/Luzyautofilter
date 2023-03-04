@@ -754,7 +754,7 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>Hey 👋🏻 {message.from_user.mention} 😍</b>\n\n<b><i>🔖 Title : {search}</b>\n<b>📫 Your Files is Ready Now</b></i>\n\n<b><i>🅒 2023 | 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 : @MC_TgLinks**</b></i>"
     if imdb and imdb.get('poster'):
         try:
-            mm =  await message.reply_photo(photo=https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg, caption=cap[:1024],
+            mm =  await message.reply_photo(photo="https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg" , caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn)) 
                 await asyncio.sleep(300)
                 await mm.delete()
