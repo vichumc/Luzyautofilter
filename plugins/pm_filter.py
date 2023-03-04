@@ -754,10 +754,10 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>Hey 👋🏻 {message.from_user.mention} 😍</b>\n\n<b><i>🔖 Title : {search}</b>\n<b>📫 Your Files is Ready Now</b></i>\n\n<b><i>🅒 2023 | 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 : @MC_TgLinks**</b></i>"
     if imdb and imdb.get('poster'):
         try:
-            hehe =  await message.reply_photo(photo=https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg, caption=cap[:1024],
+            mm =  await message.reply_photo(photo=https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg, caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn)) 
                 await asyncio.sleep(300)
-                await hehe.delete()
+                await mm.delete()
 
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -825,8 +825,12 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    zz = await msg.reply('<b><i>Searching for the File, Wait...🧐<i/></b>')
+    await asyncio.sleep(1)
+    zz1 = await zz.edit("<b><i>Requested file not found! Click the correct name from Below 👇\n\nനിങ്ങൾ ഉദ്ദേശിച്ച മൂവി താഴെ കാണുന്നതിൽ ഏതെങ്കിലും ആണെങ്കിൽ അതിൽ ക്ലിക്ക് ചെയ്യുക 👇</i></b>",
                     reply_markup=InlineKeyboardMarkup(btn))
+    await asyncio.sleep(20)
+    await zz1.delete()
 
 
 async def manual_filters(client, message, text=False):
