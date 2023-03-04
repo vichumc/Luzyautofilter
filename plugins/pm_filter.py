@@ -386,7 +386,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check Your Personal Message. I Have Sent The File 😉🎞', show_alert=True)
+                await query.answer('Check My Personal Message. I Have Sent U The File @@LuzyTgMoviebot 🎞️', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock @LuzyTgMoviebot First ‼', show_alert=True)
         except PeerIdInvalid:
@@ -637,7 +637,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == 'tips':
         await query.answer("🔰 Ask with correct spelling\n🔰 Don't ask movies those are not released in OTT 🚫\n🔰 For better results:\n\t\t\t\t\t\t- MovieName year\n\t\t\t\t\t\t- Eg: Thunivu 2023\n\tⒸ @MC_TgLinks", True)
     elif query.data == 'reqst1':
-        await query.answer("Hey Bro 😍\n\n🎯 Click On The File Below You Want And Start The Bot ⬇️", True)
+        await query.answer("Hey Dear 😍\n\n🎯 Click On The File Below You Want And Start The Bot ⬇️", True)
     elif query.data == 'info':
         await query.answer("⚠︎ Information ⚠︎\n\nIf you do not see the requested movie / series file, look at the next page\n\nⒸ @MC_TgLinks", True)
     try: await query.answer('𝐋𝐨𝐚𝐝𝐢𝐧𝐠...')
