@@ -763,17 +763,17 @@ async def auto_filter(client, msg, spoll=False):
             pic = imdb.get('poster')
             poster = pic.replace('https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo(photo=https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
-                await asyncio.sleep(300)
-                await hmm.delete()
+                  await asyncio.sleep(300)
+                  await hmm.delete()
         except Exception as e:
             logger.exception(e)
             fek = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) 
-                await asyncio.sleep(300)
-                await fek.delete()
+                  await asyncio.sleep(300)
+                  await fek.delete()
     else:
         fuk = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(300)
-            await fuk.delete()
+              await asyncio.sleep(300)
+              await fuk.delete()
 
 async def advantage_spell_chok(msg):
     query = re.sub(
@@ -814,8 +814,8 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(20)
-        await k.delete()
+            await asyncio.sleep(20)
+            await k.delete()
         return
     SPELL_CHECK[msg.id] = movielist
     btn = [[
@@ -826,11 +826,11 @@ async def advantage_spell_chok(msg):
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     zz = await msg.reply('<b><i>Searching for the File, Wait...🧐<i/></b>')
-    await asyncio.sleep(1)
-    zz1 = await zz.edit("<b><i>Requested file not found! Click the correct name from Below 👇\n\nനിങ്ങൾ ഉദ്ദേശിച്ച മൂവി താഴെ കാണുന്നതിൽ ഏതെങ്കിലും ആണെങ്കിൽ അതിൽ ക്ലിക്ക് ചെയ്യുക 👇</i></b>",
+         await asyncio.sleep(1)
+   zz1 = await zz.edit("<b><i>Requested file not found! Click the correct name from Below 👇\n\nനിങ്ങൾ ഉദ്ദേശിച്ച മൂവി താഴെ കാണുന്നതിൽ ഏതെങ്കിലും ആണെങ്കിൽ അതിൽ ക്ലിക്ക് ചെയ്യുക 👇</i></b>",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(20)
-    await zz1.delete()
+         await asyncio.sleep(20)
+         await zz1.delete()
 
 
 async def manual_filters(client, message, text=False):
