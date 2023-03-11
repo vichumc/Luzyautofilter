@@ -754,21 +754,28 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>Hey 👋🏻 {message.from_user.mention} 😍</b>\n\n<b><i>🔖 Title : {search}</b>\n<b>📫 Your Files is Ready Now</b></i>\n\n<b><i>🅒 2023 | 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 : @MC_TgLinks**</b></i>"
     if imdb and imdb.get('poster'):
         try:
-                  await message.reply_photo(photo="https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg" , caption=cap[:1024],
-                                      reply_markup=InlineKeyboardMarkup(btn)) 
-         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+            z = await message.reply_photo(photo="https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg", caption=cap[:1024],
+                                      reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(300)
+            await z.delete()
+        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
-            poster = pic.replace('https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg', "._V1_UX360.jpg")
-                  await message.reply_photo(photo=https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            poster = pic.replace('https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg', "https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg")
+            m = await message.reply_photo(photo="https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg", caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(300)
+            await m.delete()
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) 
-                  await asyncio.sleep(300)
-                  await fek.delete()
+            n = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(300)
+            await n.delete()
     else:
-        fuk = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-              await asyncio.sleep(300)
-              await fuk.delete()
+        p = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(300)
+        await p.delete()
+    if spoll:
+        await msg.message.delete()
+
 
 async def advantage_spell_chok(msg):
     query = re.sub(
@@ -779,7 +786,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("I couldn't find any movie in this name.")
         await asyncio.sleep(20)
         await k.delete()
         return
@@ -808,9 +815,9 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-            await asyncio.sleep(20)
-            await k.delete()
+        k = await msg.reply("Requested Movie/Series Spelling incorrect or OTT/DVD not Released")
+        await asyncio.sleep(20)
+        await k.delete()
         return
     SPELL_CHECK[msg.id] = movielist
     btn = [[
@@ -821,12 +828,11 @@ async def advantage_spell_chok(msg):
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     zz = await msg.reply('<b><i>Searching for the File, Wait...🧐<i/></b>')
-         await asyncio.sleep(1)
-   zz1 = await zz.edit("<b><i>Requested file not found! Click the correct name from Below 👇\n\nനിങ്ങൾ ഉദ്ദേശിച്ച മൂവി താഴെ കാണുന്നതിൽ ഏതെങ്കിലും ആണെങ്കിൽ അതിൽ ക്ലിക്ക് ചെയ്യുക 👇</i></b>",
+    await asyncio.sleep(1)
+    zz1 = await zz.edit("<b><i>Requested file not found! Click the correct name from Below 👇\n\nനിങ്ങൾ ഉദ്ദേശിച്ച മൂവി താഴെ കാണുന്നതിൽ ഏതെങ്കിലും ആണെങ്കിൽ അതിൽ ക്ലിക്ക് ചെയ്യുക 👇</i></b>",
                     reply_markup=InlineKeyboardMarkup(btn))
-         await asyncio.sleep(20)
-         await zz1.delete()
-
+    await asyncio.sleep(20)
+    await zz1.delete()
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
@@ -845,11 +851,7 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await client.send_message(
-                                group_id, 
-                                reply_text, 
-                                disable_web_page_preview=True,
-                                reply_to_message_id=reply_id)
+                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
                             await client.send_message(
@@ -874,6 +876,7 @@ async def manual_filters(client, message, text=False):
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
+                    
                 except Exception as e:
                     logger.exception(e)
                 break
