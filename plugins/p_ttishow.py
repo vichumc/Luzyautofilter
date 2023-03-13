@@ -26,7 +26,7 @@ async def save_group(bot, message):
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
-                text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
+                text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact owner @Myztic_Soul</b>',
                 reply_markup=reply_markup,
             )
 
@@ -42,7 +42,7 @@ async def save_group(bot, message):
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-                        text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\n›› Don't Forget Make Admin 🙃\n›› Is Any Doubts About Using Me Click Below Button..⚡⚡.</b>",
+                        text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\n›› Don't Forget To Make Me Admin 🙃\n›› If Any Doubts About Using Me Click Below Button..⚡⚡.</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
