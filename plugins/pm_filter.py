@@ -149,7 +149,7 @@ async def advantage_spoll_choker(bot, query):
     if not movies:
         return await query.answer("You are clicking on an old button which is expired.", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('Checking for File in database...🔍')
+    await query.answer('Checking for the File in database...🔍')
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -386,7 +386,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check My Personal Message. I Have Sent U The File @@LuzyTgMoviebot 🎞️', show_alert=True)
+                await query.answer('Check My Personal Message. I Have Sent U The File Check @LuzyTgMoviebot 🎞️', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock @LuzyTgMoviebot First ‼', show_alert=True)
         except PeerIdInvalid:
@@ -635,7 +635,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
     elif query.data == 'tips':
-        await query.answer("🔰 Ask with correct spelling\n🔰 Don't ask movies those are not released in OTT 🚫\n🔰 For better results:\n\t\t\t\t\t\t- MovieName year\n\t\t\t\t\t\t- Eg: Thunivu 2023\n\tⒸ @MC_TgLinks", True)
+        await query.answer("🔰 Ask with correct spelling\n🔰 Don't ask movies those are not released in OTT 🚫\n🔰 For better results:\n\t\t\t\t\t\t- MovieName year\n\t\t\t\t\t\t- Eg: Chathuram 2023\n\tⒸ @MC_TgLinks", True)
     elif query.data == 'reqst1':
         await query.answer("Hey Dear 😍\n\n🎯 Click On The File Below You Want And Start The Bot ⬇️", True)
     elif query.data == 'info':
