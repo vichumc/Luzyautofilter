@@ -426,13 +426,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ ADD ME TO YOUR GROUP ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs 📢', url='https://t.me/moviesclubupdates'),
-            InlineKeyboardButton('🎞 ᴍᴏᴠɪᴇs 🎞', url='https://t.me/+l3_xaeVV6x1lMjk5')
+            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+TGPAvILX9_thNGU9'),
+            InlineKeyboardButton('🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞', url='https://t.me/+G2ZP7VAY6QMzYmQ1')
             ],[      
-            InlineKeyboardButton('🛠 ʜᴇʟᴘ 🛠', callback_data='help'),
-            InlineKeyboardButton('🤖 ᴀʙᴏᴜᴛ 🤖', callback_data='about')
+            InlineKeyboardButton('🛠 𝐇𝐞𝐥𝐩 🛠', callback_data='help'),
+            InlineKeyboardButton('🤖 𝐀𝐛𝐨𝐮𝐭 𝐦𝐞 🤖', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -460,7 +460,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Updates 🤖', url='https://t.me/moviesclubupdates'),
+            InlineKeyboardButton('🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞', url='https://t.me/+G2ZP7VAY6QMzYmQ1'),
             InlineKeyboardButton('🔒 Source 🔒', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home 🏠', callback_data='start'),
