@@ -815,7 +815,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Requested Movie/Series Spelling incorrect or OTT/DVD not Released Type correct movie name with year \nEg: Romancham 2023 \nതാങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല, \nസിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇 \nEg: Romancham 2023")
+        k = await msg.reply("{message.from_user.mention} Requested Movie/Series Spelling incorrect or OTT/DVD not Released \n\nType correct movie name with year \n\nEg: Romancham 2023 \n\nതാങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല, \n\nസിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇 \n\nEg: Romancham 2023")
         await asyncio.sleep(20)
         await k.delete()
         return
