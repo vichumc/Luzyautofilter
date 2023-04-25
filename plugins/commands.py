@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/moviesclubupdates')
+                InlineKeyboardButton('🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞', url='https://t.me/+G2ZP7VAY6QMzYmQ1')
             ],
             [
-                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('🛠 𝐇𝐞𝐥𝐩 🛠', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -42,13 +42,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ ADD ME TO YOUR GROUP ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs 📢', url='https://t.me/moviesclubupdates'),
-            InlineKeyboardButton('🎞 ᴍᴏᴠɪᴇs 🎞', url='https://t.me/+7Yv7oUfrHWg1MDEx')
+            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+TGPAvILX9_thNGU9'),
+            InlineKeyboardButton('🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞', url='https://t.me/+G2ZP7VAY6QMzYmQ1')
             ],[      
-            InlineKeyboardButton('🛠 ʜᴇʟᴘ 🛠', callback_data='help'),
-            InlineKeyboardButton('🤖 ᴀʙᴏᴜᴛ 🤖', callback_data='about')
+            InlineKeyboardButton('🛠 𝐇𝐞𝐥𝐩 🛠', callback_data='help'),
+            InlineKeyboardButton('🤖 𝐀𝐛𝐨𝐮𝐭 𝐌𝐞 🤖', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -67,7 +67,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "📢 Join updates channel 📢", url=invite_link.invite_link
+                    "📢 JOIN CHANNEL FIRST 📢", url=invite_link.invite_link
                 )
             ]
         ]
@@ -76,25 +76,25 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("🔄 Try Again 🔄", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("🔄 TRY AGAIN 🔄", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("🔄 Try Again 🔄", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("🔄 TRY AGAIN 🔄", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text=f"""**📢 Read This Instruction 📢\n\nനിങ്ങൾ ചോദിക്കുന്ന സീരിസുകൾ ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ ജോയിൻ ചെയ്തിരിക്കണം. ജോയിൻ ചെയ്യാൻ "📢 Join updates channel 📢" എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്യാവുന്നതാണ്.\n\nജോയിൻ ചെയ്ത ശേഷം "🔄 Try Again 🔄" എന്ന ബട്ടണിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ അയച്ചു തരുന്നതാണ്..\n\nJOIN UPDATES CHANNEL AND THEN CLICK TRY AGAIN BUTTON TO GET THE FILE**""",
+            text=f"""**⚠ READ THIS INSTRUCTION ⚠\n\nClick Below "📢 JOIN CHANNEL FIRST 📢" Button And Join The Channel. Then Click "🔄 TRY AGAIN" Button To Get Your File📁! \n\n\nനിങ്ങൾ ആവശ്യപ്പെടുന്ന ഫയൽ ലഭിക്കാൻ താഴെ കാണുന്ന "📢 JOIN CHANNEL FIRST 📢" എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് ചാനൽ ജോയിൻ ചെയ്യുക.\nജോയിൻ ചെയ്ത ശേഷം "🔄 TRY AGAIN 🔄" എന്ന ബട്ടണിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഫയൽ അയച്ചു തരുന്നതാണ്.📁**""",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ ADD ME TO YOUR GROUP ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs 📢', url='https://t.me/moviesclubupdates'),
-            InlineKeyboardButton('🎞 ᴍᴏᴠɪᴇs 🎞', url='https://t.me/+7Yv7oUfrHWg1MDEx')
+            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+TGPAvILX9_thNGU9'),
+            InlineKeyboardButton('🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞', url='https://t.me/+G2ZP7VAY6QMzYmQ1')
             ],[      
-            InlineKeyboardButton('🛠 ʜᴇʟᴘ 🛠', callback_data='help'),
-            InlineKeyboardButton('🤖 ᴀʙᴏᴜᴛ 🤖', callback_data='about')
+            InlineKeyboardButton('🛠 𝐇𝐞𝐥𝐩 🛠', callback_data='help'),
+            InlineKeyboardButton('🤖 𝐀𝐛𝐨𝐮𝐭 𝐌𝐞 🤖', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -141,7 +141,7 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("📢 UPDATES CHANNEL 📢", url="https://t.me/moviesclubupdates") ] ] ),
+                    reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞", url="https://t.me/+G2ZP7VAY6QMzYmQ1") ] ] ),
                     protect_content=msg.get('protect', False),
                     )
             except FloodWait as e:
@@ -245,8 +245,8 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("📢 ᴜᴘᴅᴀᴛᴇs 📢", url="https://t.me/moviesclubupdates"),
-                                               InlineKeyboardButton("🎞 REQUEST GROUP 🎞", url="https://t.me/+TGPAvILX9_thNGU9") ],
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞", url="https://t.me/+G2ZP7VAY6QMzYmQ1"),
+                                               InlineKeyboardButton("🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍", url="https://t.me/+TGPAvILX9_thNGU9") ],
                                              [ InlineKeyboardButton("🔖ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴜʙᴛɪᴛʟᴇ🔖", url="https://telegra.ph/httpstelegraphfilee908cfc0d08e47ca337ecjpg-01-06") ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
