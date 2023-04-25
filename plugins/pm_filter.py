@@ -815,7 +815,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("{message.from_user.mention} Requested Movie/Series Spelling incorrect or OTT/DVD not Released \n\nType correct movie name with year \n\nEg: Romancham 2023 \n\nതാങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല, \n\nസിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇 \n\nEg: Romancham 2023")
+        k = await msg.reply 📝{message.from_user.mention} ("<b>★ Requested Movie/Series Spelling incorrect or OTT/DVD not Released!<b> \n\n<b>★ Type correct movie name with year<b> \n\n<b>Eg: Romancham 2023<b> \n\n<b>★ താങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല!<b> \n\n<b>★ സിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇<b> \n\n<b>Eg: Romancham 2023<b>")
         await asyncio.sleep(20)
         await k.delete()
         return
@@ -827,7 +827,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    zz = await msg.reply('<b><i>Searching for the File, Wait...🧐<i/></b>')
+    zz = await msg.reply('<b><i>🔍 Searching for the File, Wait...<i/></b>')
     await asyncio.sleep(1)
     zz1 = await zz.edit("<b><i>Requested file not found! Click the correct name from Below 👇\n\nനിങ്ങൾ ഉദ്ദേശിച്ച മൂവി താഴെ കാണുന്നതിൽ ഏതെങ്കിലും ആണെങ്കിൽ അതിൽ ക്ലിക്ക് ചെയ്യുക 👇</i></b>",
                     reply_markup=InlineKeyboardMarkup(btn))
