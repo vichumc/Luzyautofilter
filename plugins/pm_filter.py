@@ -786,7 +786,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in this name.")
+        k = await msg.reply("<b>★ Requested Movie/Series Spelling incorrect or OTT/DVD not Released!<b> \n\n <b>★ Type correct movie name with year<b> \n\n <b>Eg: Romancham 2023<b> \n\n <b>★ താങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല!<b> \n\n <b>★ സിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇<b> \n\n <b>Eg: Romancham 2023<b>")
         await asyncio.sleep(20)
         await k.delete()
         return
