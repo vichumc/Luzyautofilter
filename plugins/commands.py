@@ -44,7 +44,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+TGPAvILX9_thNGU9'),
+            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+M60R1C_kYx84NDU9'),
             InlineKeyboardButton('🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞', url='https://t.me/+G2ZP7VAY6QMzYmQ1')
             ],[      
             InlineKeyboardButton('🛠 𝐇𝐞𝐥𝐩 🛠', callback_data='help'),
@@ -90,7 +90,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+TGPAvILX9_thNGU9'),
+            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+M60R1C_kYx84NDU9'),
             InlineKeyboardButton('🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞', url='https://t.me/+G2ZP7VAY6QMzYmQ1')
             ],[      
             InlineKeyboardButton('🛠 𝐇𝐞𝐥𝐩 🛠', callback_data='help'),
@@ -246,7 +246,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞", url="https://t.me/+G2ZP7VAY6QMzYmQ1")],
-                                             [ InlineKeyboardButton("🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍", url="https://t.me/+TGPAvILX9_thNGU9") ] ] ),
+                                             [ InlineKeyboardButton("🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍", url="https://t.me/+M60R1C_kYx84NDU9") ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
