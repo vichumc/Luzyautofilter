@@ -428,7 +428,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ 𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+TGPAvILX9_thNGU9'),
+            InlineKeyboardButton('🤍 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🤍', url='https://t.me/+M60R1C_kYx84NDU9'),
             InlineKeyboardButton('🎞 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎞', url='https://t.me/+G2ZP7VAY6QMzYmQ1')
             ],[      
             InlineKeyboardButton('🛠 𝐇𝐞𝐥𝐩 🛠', callback_data='help'),
@@ -751,7 +751,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Hey 👋🏻 {message.from_user.mention} 😍</b>\n\n<b><i>🔖 Title : {search}</b>\n<b>📫 Your Files is Ready Now</b></i>\n\n<b><i>🅒 2023 | 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 : @MC_TgLinks**</b></i>"
+        cap = f"<b>Hey 👋🏻 {message.from_user.mention} 😍</b>\n\n<b><i>🔖 Title : {search}</b>\n<b>📫 Your Files is Ready Now</b></i>\n\n<b><i>🅒 2024 | 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 : @MC_TgLinks**</b></i>"
     if imdb and imdb.get('poster'):
         try:
             z = await message.reply_photo(photo="https://telegra.ph/file/1f6da6d2b9801077fbf5a.jpg", caption=cap[:1024],
@@ -786,7 +786,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("<b>★ Requested Movie/Series Spelling incorrect or OTT/DVD not Released!<b> \n\n <b>★ Type correct movie name with year<b> \n\n <b>Eg: Romancham 2023<b> \n\n <b>★ താങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല!<b> \n\n <b>★ സിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇<b> \n\n <b>Eg: Romancham 2023<b>")
+        k = await msg.reply("<b>★ Requested Movie/Series Spelling incorrect or OTT/DVD not Released!<b> \n\n <b>★ Type correct movie name with year<b> \n\n <b>Eg: Aavesham 2024<b> \n\n <b>★ താങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല!<b> \n\n <b>★ സിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇<b> \n\n <b>Eg: Aavesham 2024<b>")
         await asyncio.sleep(20)
         await k.delete()
         return
@@ -815,7 +815,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("<b>★ Requested Movie/Series Spelling incorrect or OTT/DVD not Released!<b> \n\n <b>★ Type correct movie name with year<b> \n\n <b>Eg: Romancham 2023<b> \n\n <b>★ താങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല!<b> \n\n <b>★ സിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇<b> \n\n <b>Eg: Romancham 2023<b>")
+        k = await msg.reply("<b>★ Requested Movie/Series Spelling incorrect or OTT/DVD not Released!<b> \n\n <b>★ Type correct movie name with year<b> \n\n <b>Eg: Aavesham 2024<b> \n\n <b>★ താങ്കൾ ആവശ്യപ്പെട്ട മൂവി/സീരീസ് സ്പെല്ലിംഗ് തെറ്റാണ് അല്ലെങ്കിൽ OTT/DVD റിലീസ് ചെയ്തിട്ടില്ല!<b> \n\n <b>★ സിനിമയുടെ കറക്റ്റ് പേരിനോടൊപ്പം വർഷം കൂടി ടൈപ്പ് ചെയ്തു നോക്കുക 😇<b> \n\n <b>Eg: Aavesham 2024<b>")
         await asyncio.sleep(20)
         await k.delete()
         return
